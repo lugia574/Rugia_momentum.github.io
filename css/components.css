@@ -1,0 +1,15 @@
+input {
+  width: auto;
+  border: none;
+  color: whitesmoke;
+
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input::placeholder {
+  color: whitesmoke;
+}
+
+.top_nav span:active {
+  transform: scale(0.6);
+}
