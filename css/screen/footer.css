@@ -1,0 +1,144 @@
+/*footer*/
+footer {
+  width: 100%;
+
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.weather {
+  margin: 20px 30px;
+}
+
+.weather_title {
+  font-size: 24px;
+  font-weight: 200;
+}
+
+.weather_today {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.today_info {
+  margin-left: 20px;
+
+  width: 250px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.today_info span {
+  display: inline-block;
+}
+
+#weather {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+#weather .temp {
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.cityAndWeather {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 10px;
+}
+
+.cityAndWeather span:first-child {
+  font-size: 24px;
+}
+.cityAndWeather span:last-child {
+  font-size: 12px;
+}
+
+.etc {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  font-weight: 200;
+}
+
+.etc div {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-right: 10px;
+
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.etc div span:first-child {
+  font-size: 18px;
+}
+
+.etc div span:last-child {
+  font-size: 12px;
+}
+
+.todo {
+  width: 230px;
+  height: 300px;
+
+  margin-right: 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo h1 {
+  font-size: 24px;
+  font-weight: 200;
+  margin: 10px;
+}
+
+.list_panel {
+  width: 100%;
+  height: inherit;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+#todo-form input {
+  margin: 10px;
+  font-size: 16px;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#todo-list {
+  margin: 10px;
+}
+
+#todo-list li {
+  width: 200px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#todo-list li button {
+  border: none;
+  background-color: rgba(0, 0, 0, 0);
+  color: whitesmoke;
+}
