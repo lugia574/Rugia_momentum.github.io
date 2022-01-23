@@ -83,3 +83,7 @@ main {
 .greeting-setting-content i {
   padding: 5px;
 }
+
+.column a:active {
+  transform: scale(0.6);
+}
