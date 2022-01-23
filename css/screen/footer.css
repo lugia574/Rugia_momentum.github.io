@@ -147,6 +147,10 @@ footer {
   align-items: center;
 }
 
+.lineThrough {
+  text-decoration: line-through;
+}
+
 #todo-list li button {
   border: none;
   background-color: rgba(0, 0, 0, 0);

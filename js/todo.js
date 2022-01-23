@@ -15,10 +15,23 @@ function saveToDos() {
 }
 
 function deleteToDo(event) {
-  const delLi = event.target.parentElement;
+  const delLi = event.target.parentElement.parentElement;
   delLi.remove();
   toDos = toDos.filter((toDo) => toDo.id !== parseInt(delLi.id));
   saveToDos();
+}
+
+const LINETHROUGH = "lineThrough";
+
+function lineThrough(event) {
+  const lineThrough = event.target.parentElement.parentElement;
+  const lineThroughClass = lineThrough.classList;
+
+  if (lineThroughClass.value.includes(LINETHROUGH)) {
+    lineThrough.classList.remove(LINETHROUGH);
+  } else {
+    lineThrough.classList.add(LINETHROUGH);
+  }
 }
 
 function paintToDo(newToDo) {
@@ -27,13 +40,20 @@ function paintToDo(newToDo) {
   const toDoSpan = document.createElement("span");
   toDoSpan.innerText = newToDo.text;
 
+  const toDoIcon = document.createElement("div");
   const ToDoButton = document.createElement("button");
+  const ToDoButton2 = document.createElement("button");
   ToDoButton.innerText = "✔";
+  ToDoButton2.innerText = "✖";
 
-  ToDoButton.addEventListener("click", deleteToDo);
+  toDoIcon.appendChild(ToDoButton);
+  toDoIcon.appendChild(ToDoButton2);
+
+  ToDoButton.addEventListener("click", lineThrough);
+  ToDoButton2.addEventListener("click", deleteToDo);
 
   toDoLi.append(toDoSpan);
-  toDoLi.appendChild(ToDoButton);
+  toDoLi.appendChild(toDoIcon);
 
   toDoList.appendChild(toDoLi);
 }
