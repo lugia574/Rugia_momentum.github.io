@@ -37,6 +37,11 @@ function lineThrough(event) {
 function paintToDo(newToDo) {
   const toDoLi = document.createElement("li");
   toDoLi.id = newToDo.id;
+
+  if (newToDo.cheack === LINETHROUGH) {
+    toDoLi.classList.add(LINETHROUGH);
+  }
+
   const toDoSpan = document.createElement("span");
   toDoSpan.innerText = newToDo.text;
 
@@ -66,6 +71,7 @@ function handleToDoSubmit(event) {
   const newToDoObj = {
     text: newToDo,
     id: Date.now(),
+    cheack: false,
   };
 
   toDos.push(newToDoObj);
