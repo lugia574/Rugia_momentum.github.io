@@ -4,97 +4,136 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="upgrade-insecure-requests"
+    />
     <link rel="stylesheet" href="css/styles.css" />
     <title>Momentum App</title>
   </head>
   <body>
     <div class="wrap">
       <!-- header -->
-        <div class="header">
-          <div class="clock">
-            <div id="clock" class="time">00:00</div>
-            <div id="week-today" class="today">
-              <span></span>
-            </div>
-          </div>
-          <div class="top_nav">
-            <li class="nav_menu"><a href="#"><span>web</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>web-1</li></a>
-                <a href="#"><li>web-2</li></a>
-                <a href="#"><li>web-3</li></a>
-            </ul>  </li>
-            <li class="nav_menu"><a href="#"><span>video</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>video-1</li></a>
-                <a href="#"><li>video-2</li></a>
-                <a href="#"><li>video-3</li></a>
-            </ul>   
-            </li>
-            <li class="nav_menu"><a href="#"><span>social</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>social-1</li></a>
-                <a href="#"><li>social-2</li></a>
-                <a href="#"><li>social-3</li></a>
-            </ul>  
-          </li>
-            <li class="nav_menu"><a href="#"><span>games</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>games-1</li></a>
-                <a href="#"><li>games-2</li></a>
-                <a href="#"><li>games-3</li></a>
-            </ul>  
-          </li>
-            <li class="nav_menu"><a href="#"><span>music</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>music-1</li></a>
-                <a href="#"><li>music-2</li></a>
-                <a href="#"><li>music-3</li></a>
-            </ul>  
-          </li>
-            <li class="nav_menu"><a href="#"><span>picture</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>picture-1</li></a>
-                <a href="#"><li>picture-2</li></a>
-                <a href="#"><li>picture-3</li></a>
-            </ul>  
-          </li>
-            <li class="nav_menu"><a href="#"><span>settings</span></a>
-              <ul class="menu_s">
-                <a href="#"><li>settings-1</li></a>
-                <a href="#"><li>settings-2</li></a>
-                <a href="#"><li>settings-3</li>
-            </ul>  
-          </li>
+      <div class="header">
+        <div class="clock">
+          <div id="clock" class="time">00:00</div>
+          <div id="week-today" class="today">
+            <span></span>
           </div>
         </div>
+        <div class="top_nav">
+          <li class="nav_menu">
+            <a href="#"><span>web</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>web-1</li></a>
+              <a href="#"><li>web-2</li></a>
+              <a href="#"><li>web-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>video</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>video-1</li></a>
+              <a href="#"><li>video-2</li></a>
+              <a href="#"><li>video-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>social</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>social-1</li></a>
+              <a href="#"><li>social-2</li></a>
+              <a href="#"><li>social-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>games</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>games-1</li></a>
+              <a href="#"><li>games-2</li></a>
+              <a href="#"><li>games-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>music</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>music-1</li></a>
+              <a href="#"><li>music-2</li></a>
+              <a href="#"><li>music-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>picture</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>picture-1</li></a>
+              <a href="#"><li>picture-2</li></a>
+              <a href="#"><li>picture-3</li></a>
+            </ul>
+          </li>
+          <li class="nav_menu">
+            <a href="#"><span>settings</span></a>
+            <ul class="menu_s">
+              <a href="#"><li>settings-1</li></a>
+              <a href="#"><li>settings-2</li></a>
+              <a href="#"><li>settings-3</li></a>
+            </ul>
+          </li>
+        </div>
+
+        <div class="music-player">
+          <div class="music-contents">
+            <div class="music-nav">
+              <div class="music-info">
+                <span>Mariya Takeuchi</span>
+                <span>Plastic Love</span>
+              </div>
+              <div class="music-nav-icon">
+                <i class="fas fa-step-forward left_animation"></i>
+                <i class="far fa-play-circle fa-lg"></i>
+                <i class="fas fa-step-forward"></i>
+              </div>
+            </div>
+            <div class="main-music">
+              <img
+                src="https://cdn.notefolio.net/img/2d/65/2d6529574e172126af2d9c08d8d19b2bc892b2141e907f6cbc66e972f722e7a2_v1.jpg"
+                alt=""
+              />
+            </div>
+            <input class="music_bar" type="range" />
+          </div>
+        </div>
+      </div>
       <!-- main -->
       <main>
         <div class="main">
           <div class="main_txt">
-          <form class="hidden" id="login-form">
-            <input
-              required
-              maxlength="15"
-              type="text"
-              placeholder="Hello, please login"
-            />
-            <input type="submit" value="" 7 />
-          </form>
-          <h2 id="greeting" class="hidden"></h2>
+            <form class="hidden" id="login-form">
+              <input
+                required
+                maxlength="15"
+                type="text"
+                placeholder="Hello, please login"
+              />
+              <input type="submit" value="" 7 />
+            </form>
+            <h2 id="greeting" class="hidden"></h2>
           </div>
           <div class="greeting-setting">
-            <button class="greeting-setting-btn"><i class="fas fa-ellipsis-v fa-lg hidden"></i></button>
+            <button class="greeting-setting-btn">
+              <i class="fas fa-ellipsis-v fa-lg hidden"></i>
+            </button>
             <div class="greeting-setting-content hidden">
               <div class="column">
-              <a href="#"><i class="fas fa-heart"></i><span>Favorite</span> </a>
-              <a href="#"><i class="fas fa-thumbtack"></i><span>Pin</span> </a>
-              <a href="#"><i class="fas fa-cog"></i><span>setting</span></a>
-            </div>
+                <a href="#"
+                  ><i class="fas fa-heart"></i><span>Favorite</span>
+                </a>
+                <a href="#"
+                  ><i class="fas fa-thumbtack"></i><span>Pin</span>
+                </a>
+                <a href="#"><i class="fas fa-cog"></i><span>setting</span></a>
+              </div>
             </div>
           </div>
-            
         </div>
       </main>
       <!-- footer -->
@@ -104,23 +143,23 @@
           <div id="weather_icon" class="weather_today">
             <i class="fas fa-4x"></i>
             <div class="today_info">
-              <div id="weather" >
+              <div id="weather">
                 <span class="temp"></span>
                 <span>°C</span>
                 <div class="cityAndWeather">
-                    <span></span>
-                    <span></span>
+                  <span></span>
+                  <span></span>
                 </div>
               </div>
               <div class="etc">
-                  <div id="humidity">
-                    <span></span>
-                    <span>humidity</span>
-                  </div>
-                  <div id="wind">
-                    <span></span>
-                    <span>wind</span>
-                  </div>
+                <div id="humidity">
+                  <span></span>
+                  <span>humidity</span>
+                </div>
+                <div id="wind">
+                  <span></span>
+                  <span>wind</span>
+                </div>
               </div>
             </div>
           </div>
@@ -133,17 +172,13 @@
         </div>
 
         <div class="todo">
-            <h1>Todo list</h1>
-            <div class="list_panel">
+          <h1>Todo list</h1>
+          <div class="list_panel">
             <form id="todo-form">
-                <input
-                  type="text"
-                  placeholder="Write a To Do"
-                  required
-                />
-              </form>
-              <ul id="todo-list"></ul>
-            </div>
+              <input type="text" placeholder="Write a To Do" required />
+            </form>
+            <ul id="todo-list"></ul>
+          </div>
         </div>
       </footer>
 
@@ -159,7 +194,6 @@
           <i class="fas fa-calculator"></i>
           <i class="fas fa-calendar"></i>
           <i class="fas fa-folder"></i>
-
         </div>
         <div class="nav_bar">
           <i class="fas fa-user"></i>
@@ -170,6 +204,7 @@
     </div>
 
     <script src="js/weather.js"></script>
+    <script src="js/playBtn.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/quotes.js"></script>
     <script src="js/bg.js"></script>

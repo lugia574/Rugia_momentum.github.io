@@ -10,6 +10,7 @@ header {
   margin: 20px 30px;
 
   display: flex;
+  justify-content: space-between;
 
   position: relative;
 }
@@ -58,13 +59,6 @@ header {
   margin-right: 30px;
 }
 
-.top_nav span:hover {
-  cursor: pointer;
-}
-.top_nav span:active {
-  transform: scale(0.6);
-}
-
 .top_nav ul,
 .top_nav ol,
 .top_nav li {
@@ -78,6 +72,12 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 0 10px 10px;
 }
+.menu_s a:first-child {
+  border-radius: 0 10px 10px;
+}
+.menu_s a:nth-child(n + 2) {
+  border-radius: 10px;
+}
 
 .menu_s li {
   margin: 10px 0 10px 5px;
@@ -86,4 +86,117 @@ header {
 li:hover .menu_s {
   display: flex;
   flex-direction: column;
+}
+
+.menu_s a:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.music-player {
+  position: absolute;
+  right: 40px;
+
+  width: 300px;
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-contents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+
+  margin-bottom: 10px;
+}
+
+.music-nav {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-nav span:first-child {
+  margin-bottom: 10px;
+}
+
+.music-info {
+  font-size: 14px;
+  font-weight: 200;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.music-nav-icon {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.music-nav-icon i:nth-child(2) {
+  margin: 0 20px;
+}
+
+.main-music img {
+  margin: 0;
+  padding: 0;
+
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+
+  opacity: 1;
+}
+
+.left_animation {
+  transform: rotate(180deg);
+}
+
+.left_animation:active {
+  transform: scale(0.6) rotate(180deg);
+}
+
+.music_bar {
+  position: absolute;
+  bottom: 0;
+
+  width: 300px;
+  height: 5px;
+
+  border-radius: 3px;
+
+  -webkit-appearance: none;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  background-image: linear-gradient(#ff4500, #ff4500);
+  background-size: 70% 100%;
+  background-repeat: no-repeat;
+}
+
+.music-nav-icon i:hover {
+  cursor: pointer;
+}
+
+.music-nav-icon i:nth-child(n + 2):active {
+  transform: scale(0.6);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
 }

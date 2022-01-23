@@ -31,7 +31,7 @@ body {
   color: rgb(255, 255, 255);
 }
 
-img {
+.bgimg {
   position: absolute;
   width: 100%;
   height: 100%;
