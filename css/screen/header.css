@@ -35,7 +35,6 @@ header {
 }
 
 .top_nav {
-  display: flex;
   padding: 20px;
   font-size: 24px;
   font-weight: 200;
@@ -43,7 +42,6 @@ header {
 
 .top_nav span {
   margin-right: 20px;
-  background-color: aquamarine;
 }
 
 .top_nav span:hover {
