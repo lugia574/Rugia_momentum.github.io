@@ -35,19 +35,19 @@ header {
 }
 
 .top_nav {
-  width: auto;
-  height: auto;
+  display: flex;
   padding: 20px;
-  height: auto;
-
   font-size: 24px;
   font-weight: 200;
-
-  display: flex;
 }
 
 .top_nav span {
-  display: inline-block;
-
   margin-right: 20px;
+}
+
+.top_nav span:hover {
+  cursor: pointer;
+}
+.top_nav span:active {
+  transform: scale(0.6);
 }

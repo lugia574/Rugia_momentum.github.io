@@ -142,3 +142,10 @@ footer {
   background-color: rgba(0, 0, 0, 0);
   color: whitesmoke;
 }
+
+#todo-list li button:hover {
+  cursor: pointer;
+}
+#todo-list li button:active {
+  transform: scale(0.6);
+}
