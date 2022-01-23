@@ -66,10 +66,6 @@ main {
   width: 100px;
   height: 80px;
 
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: baseline;
-
   border-radius: 0 10px 10px;
 
   position: absolute;
@@ -77,10 +73,13 @@ main {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
-.greeting-setting-content i {
-  padding: 5px;
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.greeting-setting-content a:nth-child(2) span {
-  margin: 0 30px 0 5px;
+.greeting-setting-content i {
+  padding: 5px;
 }

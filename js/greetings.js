@@ -20,11 +20,11 @@ function paintGreetings(username) {
   const hours = date.getHours();
 
   if (hours >= 5 && hours <= 11) {
-    greeting.innerText = `Good morning ${username}`;
+    greeting.innerText = `Good morning, ${username}.`;
   } else if (hours >= 12 && hours <= 19) {
-    greeting.innerText = `Good afternoon ${username}`;
+    greeting.innerText = `Good afternoon, ${username}.`;
   } else {
-    greeting.innerText = `Good evening ${username}`;
+    greeting.innerText = `Good evening, ${username}.`;
   }
   greeting.classList.remove(HIDDEN_CLASSNAME);
 }
