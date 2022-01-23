@@ -4,11 +4,20 @@ main {
   justify-content: center;
   align-items: center;
 }
+
 .main {
+  display: flex;
+  align-items: flex-end;
+
+  position: relative;
+}
+.main_txt {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  margin-top: 100px;
 }
 
 .main input {
@@ -36,4 +45,42 @@ main {
 #greeting {
   font-size: 48px;
   font-weight: 200;
+}
+
+.greeting-setting i {
+  color: whitesmoke;
+  opacity: 0.6;
+}
+
+.greeting-setting i:hover {
+  cursor: pointer;
+}
+
+.greeting-setting-btn {
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+}
+
+.greeting-setting-content {
+  width: 100px;
+  height: 80px;
+
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: baseline;
+
+  border-radius: 0 10px 10px;
+
+  position: absolute;
+  margin-left: 10px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.greeting-setting-content i {
+  padding: 5px;
+}
+
+.greeting-setting-content a:nth-child(2) span {
+  margin: 0 30px 0 5px;
 }

@@ -21,7 +21,7 @@ function paintGreetings(username) {
 
   if (hours >= 5 && hours <= 11) {
     greeting.innerText = `Good morning ${username}`;
-  } else if (hours >= 12 && hours <= 5) {
+  } else if (hours >= 12 && hours <= 19) {
     greeting.innerText = `Good afternoon ${username}`;
   } else {
     greeting.innerText = `Good evening ${username}`;
@@ -37,3 +37,21 @@ if (saverUsername === null) {
 } else {
   paintGreetings(saverUsername);
 }
+
+// setting btn
+const greetingBtn = document.querySelector(".greeting-setting-btn");
+const greetingSettingContent = document.querySelector(
+  ".greeting-setting-content"
+);
+
+const greetingSettingContentClass = greetingSettingContent.classList;
+
+function greetingSetting() {
+  if (greetingSettingContentClass.value.includes(HIDDEN_CLASSNAME)) {
+    greetingSettingContent.classList.remove(HIDDEN_CLASSNAME);
+  } else {
+    greetingSettingContent.classList.add(HIDDEN_CLASSNAME);
+  }
+}
+
+greetingBtn.addEventListener("click", greetingSetting);
