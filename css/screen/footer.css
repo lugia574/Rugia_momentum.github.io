@@ -142,3 +142,16 @@ footer {
   background-color: rgba(0, 0, 0, 0);
   color: whitesmoke;
 }
+
+#todo-list li button:hover,
+#weather:hover,
+#humidity:hover,
+#wind:hover {
+  cursor: pointer;
+}
+#todo-list li button:active,
+#weather:active,
+#humidity:active,
+#wind:active {
+  transform: scale(0.6);
+}
