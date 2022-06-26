@@ -148,8 +148,8 @@ li:hover .menu_s {
   align-items: center;
 }
 
-.music-nav-icon i:nth-child(2) {
-  margin: 0 20px;
+.music-nav-icon i {
+  margin: 0 10px;
 }
 
 .main-music img {
@@ -180,13 +180,11 @@ li:hover .menu_s {
 
   border-radius: 3px;
 
-  -webkit-appearance: none;
-
   background: rgba(255, 255, 255, 0.6);
+}
 
-  background-image: linear-gradient(#ff4500, #ff4500);
-  background-size: 70% 100%;
-  background-repeat: no-repeat;
+input[type="range"]::-webkit-slider-runnable-track {
+  cursor: pointer;
 }
 
 .music-nav-icon i:hover {
@@ -195,8 +193,4 @@ li:hover .menu_s {
 
 .music-nav-icon i:nth-child(n + 2):active {
   transform: scale(0.6);
-}
-
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
 }
