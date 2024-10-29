@@ -43,3 +43,7 @@ body {
 
   opacity: 0.9;
 }
+
+a {
+  /* pointer-events: none; */
+}
