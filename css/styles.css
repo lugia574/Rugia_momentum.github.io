@@ -10,9 +10,11 @@
 @import "screen/main.css";
 @import "screen/footer.css";
 @import "screen/right_nav.css";
+@import "screen/game.css";
 
 body {
   min-width: 1000px;
+  overflow: hidden;
 }
 
 .wrap {

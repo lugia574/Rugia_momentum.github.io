@@ -52,7 +52,9 @@ main {
   opacity: 0.6;
 }
 
-.greeting-setting i:hover {
+.greeting-setting i:hover,
+.game-start-btn,
+.game-close-btn {
   cursor: pointer;
 }
 
@@ -86,4 +88,23 @@ main {
 
 .column a:active {
   transform: scale(0.6);
+}
+
+#game-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  /* display: none; */
+}
+
+canvas {
+  background: #2d3436;
+  border: 2px solid #fff;
 }

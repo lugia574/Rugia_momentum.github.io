@@ -39,16 +39,23 @@ header {
 
 .top_nav {
   display: flex;
-  padding: 20px;
-
+  padding: 0.5 1rem;
+  width: 40rem;
   position: absolute;
-
-  left: 260px;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 300px;
+  border-radius: 0.3rem;
+  gap: 1rem;
 }
 
 .top_nav li {
   font-size: 24px;
   font-weight: 200;
+  display: flex;
+  justify-content: center;
+  width: auto;
+
+  border-radius: 0.5rem;
 }
 
 .top_nav ul li {
@@ -56,7 +63,7 @@ header {
 }
 
 .top_nav span {
-  margin-right: 30px;
+  padding: 0.5rem;
 }
 
 .top_nav ul,
@@ -79,16 +86,12 @@ header {
   border-radius: 10px;
 }
 
-.menu_s li {
-  margin: 10px 0 10px 5px;
-}
-
 li:hover .menu_s {
   display: flex;
   flex-direction: column;
 }
 
-.menu_s a:hover {
+.top_nav li:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
@@ -142,7 +145,6 @@ li:hover .menu_s {
 
 .music-nav-icon {
   width: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;

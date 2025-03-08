@@ -1,0 +1,12 @@
+.game-board {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+}
+.game-nav {
+  display: flex;
+  height: 55%;
+  width: 15%;
+  justify-content: space-between;
+  align-items: start;
+}

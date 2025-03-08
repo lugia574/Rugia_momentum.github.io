@@ -4,8 +4,6 @@ function onGeoOk(position) {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
 
-  console.log(lat, lon);
-
   const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric`;
 
   fetch(url)
@@ -47,4 +45,8 @@ function onGeoOk(position) {
 function onGeoError() {
   alert("can't find you. No wether for you");
 }
-navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
+navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError, {
+  enableHighAccuracy: true,
+  timeout: 10000,
+  maximumAge: 0,
+});

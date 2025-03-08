@@ -30,72 +30,26 @@
         </div>
         <div class="top_nav">
           <li class="nav_menu">
-            <a href=""><span>web</span></a>
-            <ul class="menu_s">
-              <a href=""><li>web-1</li></a>
-              <a href=""><li>web-2</li></a>
-              <a href=""><li>web-3</li></a>
-            </ul>
+            <span>video</span>
           </li>
           <li class="nav_menu">
-            <a href=""><span>video</span></a>
-            <ul class="menu_s">
-              <a href=""><li>video-1</li></a>
-              <a href=""><li>video-2</li></a>
-              <a href=""><li>video-3</li></a>
-            </ul>
+            <span id="toggle-game">games</span>
           </li>
+          <li class="nav_menu"><span>music</span></li>
           <li class="nav_menu">
-            <a href=""><span>social</span></a>
-            <ul class="menu_s">
-              <a href=""><li>social-1</li></a>
-              <a href=""><li>social-2</li></a>
-              <a href=""><li>social-3</li></a>
-            </ul>
-          </li>
-          <li class="nav_menu">
-            <a href=""><span>games</span></a>
-            <ul class="menu_s">
-              <a href=""><li>games-1</li></a>
-              <a href=""><li>games-2</li></a>
-              <a href=""><li>games-3</li></a>
-            </ul>
-          </li>
-          <li class="nav_menu">
-            <a href=""><span>music</span></a>
-            <ul class="menu_s">
-              <a href=""><li>music-1</li></a>
-              <a href=""><li>music-2</li></a>
-              <a href=""><li>music-3</li></a>
-            </ul>
-          </li>
-          <li class="nav_menu">
-            <a href=""><span>picture</span></a>
-            <ul class="menu_s">
-              <a href=""><li>picture-1</li></a>
-              <a href=""><li>picture-2</li></a>
-              <a href=""><li>picture-3</li></a>
-            </ul>
-          </li>
-          <li class="nav_menu">
-            <a href=""><span>settings</span></a>
-            <ul class="menu_s">
-              <a href=""><li>settings-1</li></a>
-              <a href=""><li>settings-2</li></a>
-              <a href=""><li>settings-3</li></a>
-            </ul>
+            <span>picture</span>
           </li>
         </div>
 
         <div class="music-player">
           <div class="music-contents">
-            <audio src="music/Mariya Takeuchi Plastic Love.mp3">
+            <audio src="music/inspiring-piano-music.mp3">
               Your browser does not support the
             </audio>
             <div class="music-nav">
               <div class="music-info">
-                <span>Mariya Takeuchi</span>
-                <span>Plastic Love</span>
+                <span>ProductionMusic</span>
+                <span>Inspiring Piano Music</span>
               </div>
               <div class="music-nav-icon">
                 <i class="fas fa-step-forward left_animation"></i>
@@ -132,6 +86,15 @@
               <input type="submit" value="" 7 />
             </form>
             <h2 id="greeting" class="hidden"></h2>
+
+            <!-- 게임 -->
+            <div id="game-overlay" class="game-board hidden">
+              <canvas id="gameCanvas" width="500" height="600"></canvas>
+              <div class="game-nav">
+                <div id="game-start-btn" class="game-start-btn">게임 시작</div>
+                <div id="game-close-btn" class="game-close-btn">X</div>
+              </div>
+            </div>
           </div>
           <div class="greeting-setting">
             <button class="greeting-setting-btn">
@@ -225,6 +188,7 @@
     <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/audio.js"></script>
+    <script src="js/game.js"></script>
 
     <!-- 
     fontawesome 안되면 여기 들어가 볼것
