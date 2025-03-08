@@ -55,16 +55,3 @@ function greetingSetting() {
 }
 
 greetingBtn.addEventListener("click", greetingSetting);
-
-// game-close
-const overlay = document.querySelector("#game-overlay");
-const overlayClass = overlay.classList;
-
-const gamePlay = () => {
-  overlay.style.display = overlay.style.display === "none" ? "flex" : "none";
-};
-document.getElementById("toggle-game").addEventListener("click", gamePlay);
-
-document
-  .getElementById("game-close-btn")
-  .addEventListener("click", () => (overlay.style.display = "none"));

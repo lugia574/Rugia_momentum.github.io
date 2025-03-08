@@ -87,7 +87,7 @@ class Brick {
 
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
-const grid = Array.from({ length: gridHeight }, () =>
+let grid = Array.from({ length: gridHeight }, () =>
   Array(gridWidth + 2).fill(0)
 );
 
@@ -177,18 +177,24 @@ const DFS = (y, x, color, visited, blank) => {
 };
 
 const applyGravity = () => {
-  for (let x = 1; x < 13; x++) {
-    for (let y = 23; y > 0; y--) {
-      if (grid[y][x] === 0) {
-        let tmpY = y;
-        while (tmpY > 0 && grid[tmpY - 1][x] !== 7) {
-          grid[tmpY][x] = grid[tmpY - 1][x];
-          grid[tmpY - 1][x] = 0;
-          tmpY--;
+  let moved; // 블록이 움직였는지 체크
+  do {
+    moved = false;
+    for (let x = 1; x < 13; x++) {
+      for (let y = 23; y > 0; y--) {
+        if (grid[y][x] === 0) {
+          for (let k = y - 1; k >= 0; k--) {
+            if (grid[k][x] > 0 && grid[k][x] !== 7) {
+              grid[y][x] = grid[k][x]; // 블록 내려오기
+              grid[k][x] = 0; // 기존 자리 비우기
+              moved = true; // 움직였음을 체크
+              break;
+            }
+          }
         }
       }
     }
-  }
+  } while (moved); // 더 이상 움직일 블록이 없을 때까지 반복
 };
 
 const removeBlocks = () => {
@@ -258,6 +264,20 @@ const gridUpdate = (grid, blank) => {
   applyGravity(height);
 };
 
+const gameOver = () => {
+  ctx.fillStyle = "black";
+  ctx.font = "30px Courier";
+  ctx.fillText("Game Over", 120, 200);
+  gameRunning = false;
+};
+
+const youWin = () => {
+  ctx.fillStyle = "black";
+  ctx.font = "30px Courier";
+  ctx.fillText("You Win", 140, 200);
+  gameRunning = false;
+};
+
 const gameLoop = () => {
   if (!gameRunning) return;
 
@@ -308,8 +328,7 @@ const gameLoop = () => {
 
   drawGrid();
   drawScore();
-  //   requestAnimationFrame(gameLoop);
-  setTimeout(gameLoop, 500);
+  setTimeout(gameLoop, 100);
 };
 
 const openGame = () => {
@@ -320,9 +339,31 @@ const openGame = () => {
   }
 };
 
-// const closeGame = () => {
-//   document.getElementById("gameOverlay").style.display = "none";
-// };
+// const gameStartBtn = document.querySelector("#game-start-btn");
+// document.getElementById("game-start-btn").addEventListener("click", openGame);
 
-const gameStartBtn = document.querySelector("#game-start-btn");
-document.getElementById("game-start-btn").addEventListener("click", openGame);
+// game
+const overlay = document.querySelector("#game-overlay");
+const overlayClass = overlay.classList;
+
+const gamePlay = () => {
+  overlay.style.display = overlay.style.display === "none" ? "flex" : "none";
+  openGame();
+};
+const gameClose = () => {
+  overlay.style.display = "none";
+
+  grid = Array.from({ length: gridHeight }, () => Array(gridWidth + 2).fill(0));
+  // 벽 만들기
+  for (let i = 0; i < gridHeight; i++) {
+    grid[i][0] = grid[i][gridWidth + 1] = 7;
+  }
+  grid.push(new Array(gridWidth + 2).fill(7));
+
+  let brick = null;
+  gameRunning = false;
+  score = 0;
+};
+
+document.getElementById("toggle-game").addEventListener("click", gamePlay);
+document.getElementById("game-close-btn").addEventListener("click", gameClose);
